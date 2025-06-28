@@ -1,0 +1,29 @@
+Client Request
+    ↓
+Uvicorn (ASGI server)
+    ↓
+FastAPI (ASGI App)
+    ↓
+Route Match → Dependency Injection → Request Parsing & Validation (Pydantic)
+    ↓
+Execute Endpoint Function (sync or async)
+    ↓
+Return Response (JSON serialized by Pydantic)
+    ↓
+Uvicorn → Client
+
+
+🔧 Why ASGI was introduced?
+The older WSGI standard (used by Flask, Django, etc.):
+
+Only supports synchronous code.
+
+Doesn't handle WebSockets, long-lived connections, or background tasks easily.
+
+➡️ ASGI fixes that:
+
+Supports both sync and async.
+
+Supports HTTP, WebSocket, long polling, background tasks, etc.
+
+
