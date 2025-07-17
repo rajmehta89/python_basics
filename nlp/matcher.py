@@ -78,3 +78,31 @@ print(found_matches)
 
 #we can remove also the matcher here basically here 
 #matcher.remove('SolarPower')
+
+
+#------------------------------------above is the token based matching but now we are doing fo rthephase level matching actually here...add()
+
+from  spacy.matcher import PhraseMatcher
+
+matcher=PhraseMatcher(nlp.vocab)
+
+#now open up the file here like this way here 
+
+#with open('likeopen the file here')
+#now match the phrase here 
+
+#phrases_match=<provides the list here>
+
+#phrase_patterns=[nlp(text) for text in phrase_list]
+
+# matcher.add('EconMatcher',None,*phrase_patterns)
+
+# 📦 How is it different from Matcher?
+# Feature	Matcher	PhraseMatcher
+# Matches	Based on token-level rules	Based on exact text phrases
+# Custom rules	More flexible (POS, lemma, etc.)	Less flexible but easier/faster
+# Use case	Rule-based NLP	Dictionary-based matching
+
+
+#it is exactly find the particular phrase into the given text from teh given languages actually here 
+
