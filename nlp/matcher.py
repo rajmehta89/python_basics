@@ -105,4 +105,3 @@ matcher=PhraseMatcher(nlp.vocab)
 
 
 #it is exactly find the particular phrase into the given text from teh given languages actually here 
-
