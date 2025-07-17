@@ -1,4 +1,9 @@
 #let's explore part to speech folder here
+#Part of Speech (POS) tells you the role a word plays in a sentence — like whether it’s a noun, verb, adjective, etc.
+#spacyisexactly knows whatis there into teh sentence and its meaning and all very simpler way
+
+#they also knwo the sentence means the grammer and their tense as well
+
 
 import spacy
 import spacy.attrs
