@@ -1,0 +1,15 @@
+#like what is machine learning
+# Definition: Machine Learning
+Machine Learning is a field of Artificial Intelligence (AI) where computers learn from data to make predictions or decisions without being explicitly programmed.
+
+✅ How Training and Testing Works in Machine Learning
+We split data into parts to train the model and test how well it performs:
+
+Data Split	Purpose
+X_train	Input features used for training
+X_test	Input features used for testing
+y_train	Target/output for training
+y_test	Target/output for testing
+
+i have define here the menaing of the machine learnig and the dat aspliting here 
+
