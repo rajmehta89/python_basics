@@ -13,3 +13,103 @@ y_test	Target/output for testing
 
 i have define here the menaing of the machine learnig and the dat aspliting here 
 
+-------------------------------------------------------------------------------
+
+now what is the mean  and use of the recall that i have defined here 
+Recall – What It Is & Why It's Used:
+Recall (also called Sensitivity or True Positive Rate) measures how well a model identifies all actual positive cases.
+
+🧠 Formula:
+Recall
+=
+True Positives
+True Positives
++
+False Negatives
+Recall= 
+True Positives+False Negatives
+True Positives
+​
+ 
+📌 Use Case:
+Use recall when missing a positive case is costly.
+
+🩺 Example (Medical test):
+If you're building a model to detect cancer:
+
+You must catch all real cancer cases (positives),
+
+Even if some healthy people get wrongly flagged (false positives),
+
+So you want high recall.
+
+----------------------------------------------------------------------------
+
+ Precision – What It Is & Why It's Used:
+Precision measures how many of the predicted positive results are actually correct.
+
+🧠 Formula:
+Precision
+=
+True Positives
+True Positives
++
+False Positives
+Precision= 
+True Positives+False Positives
+True Positives
+​
+ 
+📌 Use Case:
+Use precision when false positives are costly or dangerous.
+
+💼 Example (Spam Filter):
+If a spam filter marks a real email as spam (false positive), that's bad.
+
+You want only true spam marked as spam → high precision.
+
+🔁 Summary:
+Metric	Focuses On	Important When...
+Precision	Correctness of positives	False positives are costly (e.g., email)
+Recall	Catching all positives	Missing positives is risky (e.g., cancer)
+
+------------------------------------------------------------------------------------------------
+
+ F1-Score – Definition & Use
+F1-score is the harmonic mean of precision and recall, used to measure a model’s overall accuracy when both false positives and false negatives matter.
+
+🧠 Formula:
+F1-Score
+=
+2
+×
+Precision
+×
+Recall
+Precision
++
+Recall
+F1-Score=2× 
+Precision+Recall
+Precision×Recall
+​
+ 
+📌 Use Case:
+Use F1-score when:
+
+You want a balance between precision and recall.
+
+Your data is imbalanced (e.g., fraud detection, rare disease).
+
+🔍 Example:
+If your model has:
+
+High precision but low recall → F1 will be moderate.
+
+High recall but low precision → F1 will also be moderate.
+
+Only when both are high → F1-score is high.
+
+---------------------------------------------------------------------------
+
+
