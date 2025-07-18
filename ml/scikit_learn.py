@@ -51,6 +51,27 @@
 #------------------------------------------------------------------------------------------------------------
 
 
+
+
+
+# Here is a simple diagram of a Confusion Matrix for binary classification (e.g., spam vs ham):
+
+# lua
+# Copy code
+#                  Predicted
+#                 Spam    Ham
+#               +--------------+
+#   Actual Spam |   TP   |  FN  |
+#               +--------------+
+#         Ham   |   FP   |  TN  |
+#               +--------------+
+
+
+
+#so here youcan se ethe confusion metrics and how it is basically works here 
+
+
+#------------------------------------------------------------------------------------
 import numpy as np
 import pandas as pd
 
@@ -97,3 +118,23 @@ from sklearn.linear_model import LogisticRegression
 lr_model=LogisticRegression(solver='lbfgs')
 
 lr_model.fit(X_train,y_train)
+
+
+
+from sklearn import metrics
+
+predictions=lr_model.predict(X_test)
+
+print(predictions)
+
+print(metrics.confusion_matrix(y_test,predictions))
+
+
+df=pd.DataFrame(metrics.confusion_matrix(y_test,predictions),index=['ham','spam'], columns=['ham','spam'])
+
+print(df)
+
+print(metrics.classification_report(y_test,predictions))
+
+print(metrics.accuracy_score(y_test,predictions))
+
