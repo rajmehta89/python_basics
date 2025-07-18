@@ -138,3 +138,37 @@ print(metrics.classification_report(y_test,predictions))
 
 print(metrics.accuracy_score(y_test,predictions))
 
+
+#----------------------------------------------------------------------------------
+#now we are wokr with naivy bias liek how itis working here that i have defined here 
+
+from sklearn.naive_bayes import MultinomialNB
+
+nb_model=MultinomialNB()
+
+nb_model.fit(X_train,y_train)
+
+predictions=nb_model.predict(X_test)
+
+print(metrics.confusion_matrix(y_test,predictions))
+
+df=pd.DataFrame(metrics.confusion_matrix(y_test,predictions),index=['ham','spam'], columns=['ham','spam'])
+
+print(df)
+
+print(metrics.classification_report(y_test,predictions))
+
+print(metrics.accuracy_score(y_test,predictions))
+
+#--------------------------------------------------------------------------------------------
+#now we are working with the SVM like how it is actullly working here 
+
+from sklearn.svm import SVC
+
+svc_model=SVC(gamma='auto')
+
+nb_model.fit(X_train,y_train)
+
+predictions=nb_model.predict(X_test)
+
+print(metrics.confusion_matrix(y_test,predictions))
