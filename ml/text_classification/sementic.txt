@@ -1,0 +1,26 @@
+🧠 What is Word2Vec?
+Word2Vec is a technique that helps a computer understand what words mean by turning them into numbers.
+
+ Why use it?
+Because computers don’t understand words, they only understand numbers.
+Word2Vec helps by converting each word into a vector (a list of numbers), where:
+
+Similar words have similar vectors
+
+Example: "king" and "queen" will be close together in the vector space.
+
+🔍 How does it work?
+It learns from text (like books or articles) using one of two methods:
+
+CBOW (Continuous Bag of Words)
+Predicts the current word from nearby words.
+Example: "The ___ barks" → guesses "dog".
+
+Skip-gram
+Predicts nearby words from the current word.
+Example: "dog" → predicts "The", "barks"
+ In short:
+Word2Vec = turns words into smart numbers so machines can understand and work with language.
+
+
+
