@@ -23,4 +23,37 @@ Example: "dog" → predicts "The", "barks"
 Word2Vec = turns words into smart numbers so machines can understand and work with language.
 
 
+🌟 Imagine a sentence:
+"The cat sits on the mat"
+
+🟩 1. CBOW (Continuous Bag of Words)
+📌 Goal:
+Guess the middle word using the words around it.
+
+🧠 Think like this:
+
+If you know the words around a blank, can you guess the missing word?
+
+Example:
+
+Input: ["The", "sits", "on"]
+
+Output: "cat"
+
+📦 So CBOW takes context words → predicts center word
+
+🟨 2. Skip-gram
+📌 Goal:
+Guess the surrounding words using the center word.
+
+🧠 Think like this:
+
+If you know one word, can you guess the words around it?
+
+
+🎯 Summary (like a game):
+CBOW: "Given neighbors, guess the center word"
+
+Skip-gram: "Given center word, guess the neighbors"
+
 
