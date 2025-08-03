@@ -55,5 +55,48 @@ If you know one word, can you guess the words around it?
 CBOW: "Given neighbors, guess the center word"
 
 Skip-gram: "Given center word, guess the neighbors"
+🤝 What is Cosine Similarity?
+Cosine similarity is a way to measure how similar two words are — based on their Word2Vec vectors.
+
+It tells us how close the meanings of two words are.
+
+📏 How does it work?
+Imagine each word is a point (vector) in space — like a direction.
+
+Cosine similarity checks the angle between two word vectors.
+
+Smaller angle → more similar
+
+Bigger angle → less similar
+
+💡 Formula (Don't worry, just idea):
+text
+Copy code
+cosine_similarity = cos(θ) = (A · B) / (||A|| * ||B||)
+Where:
+
+A and B are word vectors
+
+· is dot product
+
+||A|| and ||B|| are magnitudes
+
+🧠 Why use it in Word2Vec?
+Let’s say you have these word vectors:
+
+"king" → [0.7, 0.2, ...]
+
+"queen" → [0.69, 0.22, ...]
+
+"apple" → [0.1, -0.8, ...]
+
+Cosine similarity will say:
+
+king vs queen → Similar → High cosine value (like 0.95)
+
+king vs apple → Not similar → Low cosine value (like 0.2)
 
 
+
+🎯 Simple Summary:
+Cosine similarity tells how close two words are in meaning by comparing their directions in vector space.
