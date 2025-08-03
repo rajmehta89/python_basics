@@ -1,0 +1,3 @@
+Disinformation Detection & Analysis Platform
+React, Flask, BERT, AWS, MongoDB
+Designed and deployed a scalable, cloud-based platform to detect and analyze disinformation on social media using machine learning. Built a real-time data pipeline for content extraction, NLP-based classification (BERT), and trend visualization. Developed an interactive dashboard with filters, charts, and download options for stakeholders like journalists and policymakers. Deployed using Docker and AWS for high availability and performance.
