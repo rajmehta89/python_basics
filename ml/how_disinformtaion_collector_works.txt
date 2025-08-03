@@ -1,0 +1,63 @@
+                 +------------------------+
+                 |  Social Media APIs     |
+                 | (Twitter, FB, Reddit)  |
+                 +-----------+------------+
+                             |
+                (1) Data Collection Layer
+                             |
+            +-------------------------------+
+            |  Scraper / Stream Collector   | <- Python (Tweepy/Selenium)
+            +-------------------------------+
+                             |
+           (2) Data Pipeline + Preprocessing
+                             |
+        +----------------------------------------+
+        | Text Cleaner (NLTK/spaCy)              |
+        | - Remove stopwords, links, mentions    |
+        | - Normalize text, lemmatize/stem       |
+        +----------------------------------------+
+                             |
+                    (3) ML Classification Layer
+                             |
+           +---------------------------------------------+
+           | ML Model (scikit-learn / HuggingFace BERT)  |
+           | - Trained to classify real vs. fake         |
+           +---------------------------------------------+
+                             |
+                      (4) Data Storage
+                             |
+          +--------------------------------+
+          | Raw + Labeled Data in S3/DB    |
+          | PostgreSQL / MongoDB           |
+          +--------------------------------+
+                             |
+                      (5) Dashboard UI
+                             |
+        +--------------------------------------------+
+        | React.js App + Plotly.js/D3.js             |
+        | - Explore trends, filters, graphs          |
+        | - Download raw or processed data (CSV/JSON)|
+        +--------------------------------------------+
+
+                      (6) Cloud Infra (AWS/GCP)
+
+
+
+ 2. How It Works (Detailed)
+✅ Step 1: Real-Time Data Collection
+Use Tweepy for Twitter, Facebook Graph API, Reddit API, or scraping tools (BeautifulSoup, Selenium)
+
+Scheduled scraping or real-time streaming with:
+
+AWS Lambda / GCP Functions (for scheduled jobs)
+
+Apache Kafka / AWS Kinesis (for streaming)
+
+Data You Extract:
+Text (tweets, posts)
+
+Metadata: timestamp, author, likes, retweets
+
+Hashtags, mentions
+
+Platform name
