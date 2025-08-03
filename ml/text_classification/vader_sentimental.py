@@ -17,3 +17,17 @@ sid.polarity_scores(s)
 
 #to read the csv we areactually using the pandas here basically for thet now
  
+#so we are notactually doing the thinsg now here
+#preprocessing here
+
+#nltk for sentiment analysis
+#load csv
+#preproess
+#import nltk
+#analaysis there
+#find score
+#make accurcy report
+#done accuracy
+#confusion_metrcs
+#overall accuracy
+
