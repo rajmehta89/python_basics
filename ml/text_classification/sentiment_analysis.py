@@ -109,4 +109,77 @@ computed_similarities=sorted(computed_similarities,key=lambda item:-item[1])
           
 #so by this way we can find the similarities betwene the vector here and how it is closed to each other here and how it is excatally working here...add()                        
 print([t[0].text for t in computed_similarities[:10]]) 
-           
+ 
+ 
+#now above we are doing on the labeled dataset means the sentiment analysiis here 
+#but for the un-labalede data here 
+#so here we are solving this now
+
+#             What is VADER?
+# VADER stands for:
+
+# Valence Aware Dictionary and sEntiment Reasoner
+
+# It is a sentiment analysis tool used to detect the emotion or opinion in text — especially in social media, reviews, or short texts.
+
+# 🧪 What does it do?
+# It reads a sentence and tells you:
+
+# Is it Positive? 😊
+
+# Is it Negative? 😠
+
+# Or is it Neutral? 😐
+
+# It also gives a sentiment score.
+
+# 📦 Why is VADER special?
+# Works very well with social media text (like tweets, comments).
+
+# Understands emojis, capital letters, slang, and punctuation!
+
+# Example:
+
+# "I love this!" → Positive
+
+# "I HATE this!!!" → Very Negative
+
+# "meh" → Neutral
+
+# 🔍 What does VADER return?
+# It gives a dictionary with these scores:
+
+# python
+# Copy code
+# {
+#   'neg': 0.0,     # negative score
+#   'neu': 0.4,     # neutral score
+#   'pos': 0.6,     # positive score
+#   'compound': 0.6486  # overall score (-1 to +1)
+# }
+# compound is the most important:
+
+# > 0.05 → positive
+
+# < -0.05 → negative
+
+# between -0.05 and 0.05 → neutral
+
+# ✅ Example in Python:
+# python
+# Copy code
+# from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+
+# analyzer = SentimentIntensityAnalyzer()
+# text = "I absolutely love this product!! 😍"
+
+# score = analyzer.polarity_scores(text)
+# print(score)
+# 🎯 Summary:
+# VADER is a fast, rule-based sentiment tool that works great on casual, short texts like tweets, reviews, and chats.
+
+
+#what if like any sarcasm is also there then whta we gonna do this for that here..add()
+#here is an positivies into then negatives as well here..add()
+
+
